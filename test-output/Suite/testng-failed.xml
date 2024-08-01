@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Testfox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.testng.DataProvider_Realtime">
+        <methods>
+          <include name="amazon_login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.testng.DataProvider_Realtime -->
+    </classes>
+  </test> <!-- Testfox(failed) -->
+</suite> <!-- Failed suite [Suite] -->
