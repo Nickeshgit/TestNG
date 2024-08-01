@@ -10,11 +10,11 @@ public class DependsOn_Test {
 	}
 	
 	@Test(dependsOnMethods = "dependsn_Test.DependsOn2_Test.signin", priority = 2)
-	public void buyroll() {
+	public void roll() {
 		System.out.println("Buyroll");
 	}
 	
-	@Test(dependsOnMethods = "buyroll", priority = 4 )
+	@Test(dependsOnMethods = "roll", priority = 4 )
 	public void pay() {
 		System.out.println("Pay");
 		throw new RuntimeException();

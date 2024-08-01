@@ -1,122 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-05T20:20:30 IST" name="Default suite" finished-at="2024-03-05T20:20:39 IST" duration-ms="8195">
+  <suite started-at="2024-08-01T15:07:58 IST" name="Default suite" finished-at="2024-08-01T15:07:59 IST" duration-ms="240">
     <groups>
-      <group name="a">
-        <method signature="Test_Annotations.test1()[pri:-2, instance:com.annotations.Test_Annotations@4b29d1d2]" name="test1" class="com.annotations.Test_Annotations"/>
-        <method signature="Test_Annotations.test([Ljava.lang.String;)[pri:-1, instance:com.annotations.Test_Annotations@4b29d1d2]" name="test" class="com.annotations.Test_Annotations"/>
-      </group> <!-- a -->
     </groups>
-    <test started-at="2024-03-05T20:20:30 IST" name="Default test" finished-at="2024-03-05T20:20:39 IST" duration-ms="8195">
-      <class name="com.annotations.Test_Annotations">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="beforeSuite" finished-at="2024-03-05T20:20:30 IST" duration-ms="20" status="PASS">
+    <test started-at="2024-08-01T15:07:58 IST" name="Default test" finished-at="2024-08-01T15:07:59 IST" duration-ms="240">
+      <class name="com.testng.DependsOn_Test">
+        <test-method signature="roll()[pri:2, instance:com.testng.DependsOn_Test@5b1669c0]" started-at="2024-08-01T15:07:59 IST" name="roll" finished-at="2024-08-01T15:07:59 IST" depends-on-methods="dependsn_Test.DependsOn2_Test.signin" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="beforeTest" finished-at="2024-03-05T20:20:30 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- roll -->
+        <test-method signature="pay()[pri:4, instance:com.testng.DependsOn_Test@5b1669c0]" started-at="2024-08-01T15:07:59 IST" name="pay" finished-at="2024-08-01T15:07:59 IST" depends-on-methods="com.testng.DependsOn_Test.roll" duration-ms="3" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException
+at com.testng.DependsOn_Test.pay(DependsOn_Test.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="beforeClass" finished-at="2024-03-05T20:20:30 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- pay -->
+        <test-method signature="signout()[pri:3, instance:com.testng.DependsOn_Test@5b1669c0]" started-at="2024-08-01T15:07:59 IST" name="signout" finished-at="2024-08-01T15:07:59 IST" depends-on-methods="com.testng.DependsOn_Test.pay" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method com.testng.DependsOn_Test.signout() on instance com.testng.DependsOn_Test@5b1669c0 depends on not successfully finished methods 
+[com.testng.DependsOn_Test.pay() on instance com.testng.DependsOn_Test@5b1669c0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method com.testng.DependsOn_Test.signout() on instance com.testng.DependsOn_Test@5b1669c0 depends on not successfully finished methods 
+[com.testng.DependsOn_Test.pay() on instance com.testng.DependsOn_Test@5b1669c0]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="beforeMethod" finished-at="2024-03-05T20:20:30 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- signout -->
+      </class> <!-- com.testng.DependsOn_Test -->
+      <class name="dependsn_Test.DependsOn2_Test">
+        <test-method signature="signin()[pri:4, instance:dependsn_Test.DependsOn2_Test@543295b0]" started-at="2024-08-01T15:07:59 IST" name="signin" finished-at="2024-08-01T15:07:59 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test1()[pri:-2, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="test1" finished-at="2024-03-05T20:20:30 IST" duration-ms="53" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="afterMethod" finished-at="2024-03-05T20:20:30 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="test1()[pri:-2, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="test1" finished-at="2024-03-05T20:20:30 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="beforeMethod" finished-at="2024-03-05T20:20:30 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:30 IST" name="afterMethod" finished-at="2024-03-05T20:20:30 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:38 IST" name="beforeMethod" finished-at="2024-03-05T20:20:38 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test([Ljava.lang.String;)[pri:-1, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:38 IST" name="test" data-provider="getData" finished-at="2024-03-05T20:20:38 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@6ab72419]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:38 IST" name="afterMethod" finished-at="2024-03-05T20:20:38 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:38 IST" name="beforeMethod" finished-at="2024-03-05T20:20:38 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test([Ljava.lang.String;)[pri:-1, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:38 IST" name="test" data-provider="getData" finished-at="2024-03-05T20:20:38 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@3aacf32a]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:39 IST" name="afterMethod" finished-at="2024-03-05T20:20:39 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:39 IST" name="beforeMethod" finished-at="2024-03-05T20:20:39 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test([Ljava.lang.String;)[pri:-1, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:39 IST" name="test" data-provider="getData" finished-at="2024-03-05T20:20:39 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@4fdfa676]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:39 IST" name="afterMethod" finished-at="2024-03-05T20:20:39 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:39 IST" name="afterClass" finished-at="2024-03-05T20:20:39 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:39 IST" name="afterTest" finished-at="2024-03-05T20:20:39 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.annotations.Test_Annotations@4b29d1d2]" started-at="2024-03-05T20:20:40 IST" name="afterSuite" finished-at="2024-03-05T20:20:40 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.annotations.Test_Annotations -->
+        </test-method> <!-- signin -->
+      </class> <!-- dependsn_Test.DependsOn2_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
